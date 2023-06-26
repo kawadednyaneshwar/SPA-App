@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<img [src]="itemImageUrl" />
+<input type="text" #newItem />
+<button [disabled]="isChanged" (click)="ClickonText(newItem.value)">
+  Click
+</button>
+<app-child [message]="Cmessage"></app-child>
