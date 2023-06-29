@@ -1,2 +1,7 @@
 <p>child works!</p>
 <p>From parent {{ message }}</p>
+
+<input type="text" #parentItem />
+<button (click)="clickOnText(parentItem.value); parentItem.value = ''">
+  Child Click
+</button>

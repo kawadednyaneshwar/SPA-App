@@ -9,14 +9,18 @@ export class ParentComponent {
   Cmessage: string | undefined;
   itemImageUrl: string | undefined;
   isChanged: boolean | undefined;
+  items:string[] = [];
 
   constructor(){
     this.itemImageUrl = "../assets/images/images.png";
   }
 
   ClickonText (name: any) {
-    alert(name);
     this.isChanged = true;
     this.Cmessage = name;
+  }
+
+  addItem(value: string) {
+    this.items.push(value);
   }
 }

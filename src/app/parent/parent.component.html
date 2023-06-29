@@ -1,7 +1,12 @@
 <p>parent works!</p>
 <img [src]="itemImageUrl" />
 <input type="text" #newItem />
-<button [disabled]="isChanged" (click)="ClickonText(newItem.value)">
-  Click
-</button>
-<app-child [message]="Cmessage"></app-child>
+<button (click)="ClickonText(newItem.value)">Parent Click</button>
+<app-child [message]="Cmessage" (newItemEvent)="addItem($event)"></app-child>
+<div *ngFor="let item of items">
+  <tr>
+    {{
+      item
+    }}
+  </tr>
+</div>
