@@ -4,7 +4,7 @@
 <button (click)="ClickonText(newItem.value)">Parent Click</button>
 <app-child [message]="Cmessage" (newItemEvent)="addItem($event)"></app-child>
 <div *ngFor="let item of items">
-  <tr>
+  <tr [ngStyle]="currentStyles">
     {{
       item
     }}
