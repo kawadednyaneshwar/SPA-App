@@ -3,10 +3,27 @@
 <input type="text" #newItem />
 <button (click)="ClickonText(newItem.value)">Parent Click</button>
 <app-child [message]="Cmessage" (newItemEvent)="addItem($event)"></app-child>
-<div *ngFor="let item of items">
+<!-- <div *ngFor="let item of items">
   <tr [ngStyle]="currentStyles">
     {{
       item
     }}
   </tr>
-</div>
+</div> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>ProductId</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of products">
+      <td>{{ item.productId }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }}</td>
+    </tr>
+  </tbody>
+</table>

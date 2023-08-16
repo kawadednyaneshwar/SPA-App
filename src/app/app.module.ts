@@ -8,6 +8,10 @@ import { ChildComponent } from './child/child.component';
 import { DatePipePipe } from './date-pipe.pipe';
 import { ShowDataComponent } from './show-data/show-data.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HomeModule } from './home/home.module';
+import { GetProductsService } from './Services/get-products.service';
+import { BetterproductserviceService } from './Services/betterproductservice.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ChildComponent,
     DatePipePipe,
     ShowDataComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HomeModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,{provide:BetterproductserviceService,useClass:BetterproductserviceService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
