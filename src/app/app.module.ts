@@ -12,6 +12,8 @@ import { HomeModule } from './home/home.module';
 import { GetProductsService } from './Services/get-products.service';
 import { BetterproductserviceService } from './Services/betterproductservice.service';
 import { LoginComponent } from './login/login.component';
+import { FirstComponent } from './about/first/first.component';
+import { SecondComponent } from './about/second/second.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LoginComponent } from './login/login.component';
     DatePipePipe,
     ShowDataComponent,
     LoginComponent,
+    FirstComponent,
+    SecondComponent,
   ],
   imports: [
     BrowserModule,
